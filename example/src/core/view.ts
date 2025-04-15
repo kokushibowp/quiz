@@ -26,7 +26,7 @@ export abstract class View<TProps extends object> {
     newElement.innerHTML = this.template(templateProps).trim();
     const newNode = newElement.firstChild;
     //console.log(newNode);
-    //newNode.style.backgroundColor = 'blue';
+    //newNode.style.backgroundColor = 'blue'; // Property 'style' does not exist on type 'ChildNode'.ts(2339)
 
     if (!newNode || newElement.children.length > 1) {
       throw "Template must have only one child";
