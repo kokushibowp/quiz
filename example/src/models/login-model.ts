@@ -9,20 +9,32 @@ export class LoginModel {
     password: string | undefined,
   ) {
     if (!username || !password) {
-      this._errorMessage = "Введите корректные данные";
+      this._errorMessage = "Неверный логин или пароль";
       return;
     }
 
     try {
       const token = await AuthAPI.login(username, password);
       localStorage.setItem("token", token);
+      console.log(token);
       AppStore.setState({
         authToken: token,
       });
 
-      location.hash = "";
+      location.hash = "#main";
     } catch (error) {
-      this._errorMessage = "Произошла непредвиденная ошибка";
+      if (error instanceof Error) {
+        if (error.message === 'Unauthorized')
+          this._errorMessage = 'Неверный логин или пароль';
+        else if (error.message === 'Failed to fetch') {
+          this._errorMessage = 'Нет связи с сервером базы данных';
+        }
+        else {
+          this._errorMessage = error.message
+        }
+      } else {
+        this._errorMessage = 'Произошла непредвиденная ошибка';
+      }
     }
   }
 

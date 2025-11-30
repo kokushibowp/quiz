@@ -14,7 +14,7 @@ export class Router {
   }
 
   getRoute() {
-    return location.hash.slice(1) || "/";
+    return location.hash.slice(1) || "login";
   }
 
   renderRoute() {

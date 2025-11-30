@@ -1,0 +1,24 @@
+:root {
+  --base-white: #FFFFFF;
+  --base-black: #111827;
+  --secondary-black: #8C8C8C;
+  --indigo: #5856D6;
+  --primary-red: #EF4444;
+  --secondary-red: #FEF2F2;
+  --light-secondary: #64748B;
+
+  --background: #FFFFFF;
+  --overlay-background: #E6EBFF;
+
+  --active-button-color: #5856D6;
+  --inactive-button-color: rgba(88, 86, 214, 0.5);
+  
+  --unselected-answer: #FFFFFF;
+  --unselected-answer-radio: #111827;
+  --selected-answer-true: #FFDAD7;
+  --selected-answer-true-radio: #34C759;
+  --selected-answer-false: #BBF7D0;
+  --selected-answer-false-radio: #EF4444;
+
+  --forms-stroke: #CBD5E1;
+}

@@ -25,6 +25,7 @@ export abstract class View<TProps extends object> {
     const newElement = document.createElement("div");
     newElement.innerHTML = this.template(templateProps).trim();
     const newNode = newElement.firstChild;
+    //console.log(newElement.innerHTML);
     //console.log(newNode);
     //newNode.style.backgroundColor = 'blue'; // Property 'style' does not exist on type 'ChildNode'.ts(2339)
 

@@ -1,0 +1,307 @@
+a {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    .left {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 140px;
+     > a {
+        font-size: 28px;
+        color: #5856D6;
+     }
+     .links {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+     }   
+    }
+    .right {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        button {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-weight: 500;
+        }
+        .right-exit {
+            color: #EF4444;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+section {
+    padding: 28px 40px;
+    h1 {
+        margin-bottom: 24px;
+        font-family: "Inter", sans-serif;
+        font-size: 32px;
+        font-weight: bold;
+    }
+    .grid {
+        display: grid;
+        grid-auto-flow: dense;
+        > div {
+            cursor: pointer;
+            font-family: var(--base-font-2);
+            color: var(--base-white);
+            height: 340px;
+            background-position: center;
+            background-size: cover;
+            /*opacity: 0.3;*/
+            > div {
+                width: 100%;
+                height: 100%;
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                background-color: RGBA(0, 0, 0, 0.5);
+                > div {
+                    /*background-color: #5856D6;*/
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    > p {
+                        font-size: 24px;
+                    }
+                    > div {
+                        /*background-color: #8C8C8C;*/
+                        display: flex;
+                        justify-content: space-between;
+                        > p {
+                            font-size: 16px;
+                        }
+                        > div {
+                            display: flex;
+                            img {
+                                width: 24px;
+                                height: 24px;
+                            }
+                        }
+                    }
+                }
+            }   
+        }
+        gap: 20px;
+    }
+}
+
+footer {
+    background-color: #F3F3F3;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-between;
+    a {
+        color: #8C8C8C;
+        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .right {
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+    }
+}
+
+.quiz-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .quiz {
+        padding: 32px;
+        background-color: var(--overlay-background);
+        height: 492px;
+        border-radius: 12px;
+        font-family: var(--base-font-2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        > .question-header {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+            > h2 {
+                font-family: var(--base-font-3);
+                font-size: 28px;
+                font-weight: bold;
+            }
+            > fieldset {
+                font-size: 20px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+                > div {
+                    background-color: var(--base-white);
+                    border-radius: 8px;
+                    height: 55px;
+                    display: flex;
+                    align-items: center;
+                    > input {
+                        cursor: pointer;
+                    }
+                    > label {
+                        font-weight: 500;
+                        padding-left: 13px;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        gap: 14px;
+                    }
+                }
+            }
+        }
+        > .question-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            > p {
+                color: var(--secondary-black);
+                font-weight: bold;
+            }
+            > div {
+                > button {
+                    width: 245px;
+                    height: 55px;
+                    border-radius: 8px;
+                    background-color: var(--indigo);
+                    color: var(--base-white);
+                    font-weight: 500;
+                }
+                > button:disabled {
+                    background-color: var(--inactive-button-color);
+                }
+            }
+        }
+    }
+    
+    .quiz-img {
+        padding: 32px;
+        background-color: var(--overlay-background);
+        border-radius: 12px;
+        padding: 32px;
+        background-color: var(--overlay-background);
+        border-radius: 12px;
+        font-family: var(--base-font-2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        > .question-header {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+            > h2 {
+                font-family: var(--base-font-3);
+                font-size: 28px;
+                font-weight: bold;
+            }
+            > fieldset {
+                font-size: 20px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+                > div {
+                    background-color: var(--base-white);
+                    border-radius: 8px;
+                    height: 55px;
+                    display: flex;
+                    align-items: center;
+                    > input {
+                        cursor: pointer;
+                    }
+                    > label {
+                        font-weight: 500;
+                        padding-left: 13px;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        gap: 14px;
+                    }
+                }
+            }
+        }
+        > .question-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            > p {
+                color: var(--secondary-black);
+                font-weight: bold;
+            }
+            > div {
+                > button {
+                    width: 245px;
+                    height: 55px;
+                    border-radius: 8px;
+                    background-color: var(--indigo);
+                    color: var(--base-white);
+                    font-weight: 500;
+                }
+                > button:disabled {
+                    background-color: var(--inactive-button-color);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    section {
+        .grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .quiz {
+        width: 754px;
+        
+    }
+    .quiz-img {
+        width: 754px;
+        height: 770px;
+    }
+}
+
+@media (min-width: 1440px) {
+    section {
+        .grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .quiz{
+        width: 962px;
+    }
+    .quiz-img {
+        width: 962px;
+        height: 868px;
+    }
+}
+
+.div_narrow {
+    grid-column: span 1;
+}
+
+.div_wide {
+    grid-column: span 2;
+}

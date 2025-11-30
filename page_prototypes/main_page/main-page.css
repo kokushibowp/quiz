@@ -1,0 +1,109 @@
+a {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    .left {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 140px;
+     > a {
+        font-size: 28px;
+        color: #5856D6;
+     }
+     .links {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+     }   
+    }
+    .right {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        button {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-weight: 500;
+        }
+        .right-exit {
+            color: #EF4444;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+section {
+    padding: 28px 40px;
+    h1 {
+        margin-bottom: 24px;
+        font-family: "Inter", sans-serif;
+        font-size: 32px;
+        font-weight: bold;
+    }
+    .grid {
+        display: grid;
+        div {
+            background-color: aqua;
+            height: 340px;
+            background-position: center;
+            opacity: 0.3;
+        }
+        gap: 20px;
+    }
+}
+
+footer {
+    background-color: #F3F3F3;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-between;
+    a {
+        color: #8C8C8C;
+        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .right {
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 1440px) {
+    section {
+        .grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    section {
+        .grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+.div_narrow {
+    grid-column: span 1;
+}
+
+.div_wide {
+    grid-column: span 2;
+}
